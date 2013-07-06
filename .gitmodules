@@ -1,0 +1,6 @@
+[submodule "js-yasnippets"]
+	path = js-yasnippets
+	url = https://github.com/azer/js-yasnippets.git
+[submodule "yasnippet"]
+	path = yasnippet
+	url = https://github.com/capitaomorte/yasnippet.git
