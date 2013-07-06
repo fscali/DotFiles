@@ -16,6 +16,7 @@
 (require 'whitespace)
 (require 'dired-x)
 (require 'compile)
+(require 'highlight-indentation)
 (ido-mode t)
 (menu-bar-mode -1)
 (normal-erase-is-backspace-mode 1)
@@ -45,8 +46,14 @@
  '(region ((((class color) (min-colors 8)) (:background "white" :foreground "magenta"))))
  '(secondary-selection ((((class color) (min-colors 8)) (:background "gray" :foreground "cyan"))))
  '(show-paren-match ((((class color) (background light)) (:background "black"))))
+
  '(vertical-border ((t nil)))
 )
+
+;; ----------
+;;-- globals --
+;; ----------
+(global-hl-line-mode 1)
 
 ;; ------------
 ;; -- Macros --
@@ -82,3 +89,10 @@
               "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
+
+;; ----------------------------
+;; ---------- python ----------
+;; ----------------------------
+(add-hook 'python-mode-hook 'highlight-indentation)
+(set-face-background 'highlight-indentation-face "#e3e3d3")
+(set-face-background 'highlight-indentation-current-column-face "#c3b3b3")
