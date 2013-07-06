@@ -48,7 +48,7 @@ on spaces"
   (when highlight-indentation-current-regex ;; OFF
     (font-lock-remove-keywords nil `((,highlight-indentation-current-regex
                                       (1 'highlight-indentation-face)))))
-
+  
   (set (make-local-variable 'highlight-indentation-current-regex) nil)
 
   (when highlight-indentation-mode ;; ON
