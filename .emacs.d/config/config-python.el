@@ -8,7 +8,10 @@
 ;;(setq virtualenv-workon-starts-python nil)
 
 ;;(package-require 'pyflakes)
-
+(setq ropemacs-enable-shortcuts nil)
+(setq ropemacs-local-prefix "C-c C-p")
+(require 'pymacs)
+(pymacs-load "ropemacs" "rope-")
 
 (setq
   python-shell-interpreter "ipython"

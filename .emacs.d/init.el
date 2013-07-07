@@ -104,6 +104,7 @@
 ;; ----------------------------
 ;; (add-hook 'python-mode-hook 'highlight-indentation (lambda () (highlight-indentation-mode 1)))
 (require 'config-python)
+
 (add-hook 'python-mode-hook 'highlight-indentation-mode)
 (add-hook 'python-mode-hook 'highlight-indentation-current-column-mode)
 (set-face-background 'highlight-indentation-face "#e3e3d3")
