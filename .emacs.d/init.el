@@ -5,6 +5,8 @@
 ;; -- Global Settings --
 ;; ---------------------
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path
+              "~/.emacs.d/config")
 (require 'cl)
 (require 'ido)
 (require 'ffap)
@@ -94,6 +96,7 @@
 ;; ---------- python ----------
 ;; ----------------------------
 ;; (add-hook 'python-mode-hook 'highlight-indentation (lambda () (highlight-indentation-mode 1)))
+(require 'config-python)
 (add-hook 'python-mode-hook 'highlight-indentation-mode)
 (add-hook 'python-mode-hook 'highlight-indentation-current-column-mode)
 (set-face-background 'highlight-indentation-face "#e3e3d3")
